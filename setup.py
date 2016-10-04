@@ -23,7 +23,7 @@ setup(
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
     include_package_data=True,
     platforms='any',
-    setup_requires=['pytest-runner', 'sphinx', 'gitpython'],
+    setup_requires=['groundwork', 'groundwork_web', 'pytest-runner', 'sphinx', 'gitpython'],
     tests_require=['pytest', 'pytest-flake8'],
     install_requires=[],
     classifiers=[
@@ -40,8 +40,8 @@ setup(
     entry_points={
         'console_scripts': ["useblocks_webpage = "
                             "useblocks_webpage.applications.useblocks_webpage_app:start_app"],
-        'groundwork.plugin': ["useblocks_webpage_plugin = "
-                              "useblocks_webpage.plugins.useblocks_webpage_plugin:"
-                              "useblocks_webpage_plugin"],
+        'groundwork.plugin': ["useblocks_webpage_introduction_plugin = "
+                              "useblocks_webpage.plugins.ub_webpage_introduction.ubwebpageintroduction:"
+                              "UbWebpageIntroduction"],
     }
 )

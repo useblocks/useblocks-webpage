@@ -4,7 +4,7 @@ from groundwork import App
 
 def start_app():
     app = App([os.path.join(os.path.dirname(__file__), "configuration.py")])
-    app.plugins.activate(["useblocks_webpage_plugin", "GwPluginsInfo"])
+    app.plugins.activate(["GwWeb", "GwWebFlask", "UbWebpageIntroduction", "GwPluginsInfo"])
     app.commands.start_cli()
 
 
