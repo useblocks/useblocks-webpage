@@ -1,0 +1,6 @@
+Installation
+============
+
+Inside useblocks_webpage run::
+
+    python setup.py develop
