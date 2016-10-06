@@ -4,11 +4,15 @@ body {
   background-color: #000000;
   color: #FFFFFF;
 }
-p {
+p,
+#expertise {
   font-size: 18px;
 }
 p.small {
   font-size: 15px;
+}
+#team p {
+  line-height: 2em;
 }
 footer a,
 footer a:hover,
@@ -72,7 +76,11 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #000000;
+  background-image: -moz-linear-gradient(top, #444444, #333333 100%);
+  background-image: -ms-linear-gradient(top, #444444, #333333 100%);
+  background-image: -webkit-gradient(radial, 0, center center, 460, from(#444444), to(#333333));
+  background-image: -webkit-linear-gradient(top, #444444, #333333 100%);
+  background-image: -o-linear-gradient(top, #444444, #333333 100%);
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -236,6 +244,9 @@ a.btn-outline.active {
   background: none;
   border: 5px solid #108384;
 }
+.label {
+  margin: 5px 5px;
+}
 .label-green {
   background-color: #3da33c;
 }
@@ -243,7 +254,7 @@ a.btn-outline.active {
   background-color: #3775c4;
 }
 .label-red {
-  background-color: #e05038;
+  background-color: #e02417;
 }
 .label-transparent {
   background-color: transparent;
@@ -251,11 +262,11 @@ a.btn-outline.active {
 }
 .style_yellow {
   color: #000000;
-  background-image: -moz-radial-gradient(center top, ellipse farthest-side, #ffe066, #ffcc00 100%);
-  background-image: -ms-radial-gradient(center top, ellipse farthest-side, #ffe066, #ffcc00 100%);
-  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#ffe066), to(#ffcc00));
-  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, #ffe066, #ffcc00 100%);
-  background-image: -o-radial-gradient(center top, ellipse farthest-side, #ffe066, #ffcc00 100%);
+  background-image: -moz-radial-gradient(center top, ellipse farthest-side, #ffcc00, #d25c00 100%);
+  background-image: -ms-radial-gradient(center top, ellipse farthest-side, #ffcc00, #d25c00 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#ffcc00), to(#d25c00));
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, #ffcc00, #d25c00 100%);
+  background-image: -o-radial-gradient(center top, ellipse farthest-side, #ffcc00, #d25c00 100%);
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
   position: relative;
 }
@@ -508,4 +519,18 @@ footer .footer-below {
   background-size: 100%;
   border: 2px solid #333333;
   box-shadow: none;
+}
+.stars {
+  background-size: 100%;
+  height: 20px;
+  width: auto;
+}
+.stars_0 {
+  background: url(/static/demo/img/gw_database.png) no-repeat center;
+}
+img.rating {
+  height: 10px;
+}
+#expertise div.row {
+  margin-bottom: 20px;
 }

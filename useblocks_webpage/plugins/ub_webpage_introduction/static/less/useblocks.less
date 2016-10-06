@@ -8,12 +8,16 @@ body {
     color: @text_color;
 }
 
-p {
+p, #expertise {
 	font-size: 18px;
 }
 
 p.small {
 	font-size: 15px;
+}
+
+#team p {
+  line-height: 2em;
 }
 
 footer a,
@@ -102,7 +106,9 @@ header {
 }
 
 .navbar-custom {
-	background: @navbar_background_color;
+	//background: @navbar_background_color;
+    .linear(#444444; #333333; top);
+
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -287,6 +293,10 @@ a.btn-outline {
 	border: 5px solid #108384
 }
 
+.label {
+  margin: 5px 5px;
+}
+
 .label-green {
 	background-color: #3da33c;
 }
@@ -296,7 +306,7 @@ a.btn-outline {
 }
 
 .label-red {
-	background-color: #e05038;
+	background-color: #e02417;
 }
 
 .label-transparent {
@@ -307,7 +317,13 @@ a.btn-outline {
 .style_yellow {
 	//background: @style_yellow_background_color;
 	color: @style_yellow_text_color;
-	.radial(lighten(@style_yellow_background_color, 20%); @style_yellow_background_color; center top);
+	//.radial(lighten(@style_yellow_background_color, 20%); @style_yellow_background_color; center top);
+//	.radial(#ffcc00; #eeeeee; center top);
+//    .radial(#ffcc00; #AD0000; center top); //250% statt 100%
+//    .radial(#ffcc00; darken(#ffcc00, 30%); center top); //250% statt 100%
+    .radial(#ffcc00; #d25c00; center top); //250% statt 100%
+
+	//.radial(#FFCC00; #d83030; center top);
 	box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
 	position:relative;
 	a,
@@ -564,4 +580,22 @@ footer {
 	background-size: 100%;
 	border: 2px solid #333333;
 	box-shadow: none;
+}
+
+.stars {
+  background-size: 100%;
+  height: 20px;
+  width: auto;
+}
+
+.stars_0 {
+  background: url(/static/demo/img/gw_database.png) no-repeat center;
+}
+
+img.rating {
+  height: 10px;
+}
+
+#expertise div.row {
+  margin-bottom: 20px;
 }

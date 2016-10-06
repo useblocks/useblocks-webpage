@@ -60,10 +60,18 @@
 @gray-lighter:     lighten(@gray-base, 93.5%); // #eee
 
 //Shortcut/mixin for painting radial backgrounds
-.radial(@innerColor: #555, @outerColor: #333, @pos: center, @colorStop: 100%)  {
-        background-image: -moz-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // FF 3.6+
-        background-image: -ms-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // IE10
-        background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor)); // Android 2.3, Safari 4+, Chrome 2+
-        background-image: -webkit-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // Safari 5.1+, Chrome 10+
-        background-image: -o-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // Opera 11.10
+.radial(@innerColor: #555, @outerColor: #333, @pos: center, @colorStop: 100%) {
+  background-image: -moz-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // FF 3.6+
+  background-image: -ms-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // IE10
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor)); // Android 2.3, Safari 4+, Chrome 2+
+  background-image: -webkit-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // Safari 5.1+, Chrome 10+
+  background-image: -o-radial-gradient(@pos, ellipse farthest-side, @innerColor, @outerColor @colorStop); // Opera 11.10
+}
+
+.linear(@innerColor: #555, @outerColor: #333, @pos: center, @colorStop: 100%)  {
+  background-image: -moz-linear-gradient(@pos, @innerColor, @outerColor @colorStop); // FF 3.6+
+  background-image: -ms-linear-gradient(@pos, @innerColor, @outerColor @colorStop); // IE10
+  background-image: -webkit-gradient(radial, 0, center center, 460, from(@innerColor), to(@outerColor)); // Android 2.3, Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(@pos, @innerColor, @outerColor @colorStop); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(@pos, @innerColor, @outerColor @colorStop); // Opera 11.10
 }
