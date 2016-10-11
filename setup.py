@@ -23,9 +23,8 @@ setup(
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
     include_package_data=True,
     platforms='any',
-    setup_requires=['groundwork', 'groundwork_web', 'pytest-runner', 'sphinx', 'gitpython'],
+    install_requires=['groundwork', 'groundwork-web', 'pytest-runner', 'sphinx', 'gitpython'],
     tests_require=['pytest', 'pytest-flake8'],
-    install_requires=[],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Console',
