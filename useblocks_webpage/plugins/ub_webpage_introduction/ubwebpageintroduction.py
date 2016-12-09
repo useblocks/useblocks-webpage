@@ -17,6 +17,6 @@ class UbWebpageIntroduction(GwWebPattern):
         self.web.routes.register("/", ["GET"], self.__introduction_view, context="ub")
 
     def __introduction_view(self):
-        return self.web.providers.render("introduction.html")
+        return self.web.render("introduction.html")
 
 
