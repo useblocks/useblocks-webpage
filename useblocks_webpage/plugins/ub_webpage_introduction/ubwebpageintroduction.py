@@ -8,13 +8,13 @@ class UbWebpageIntroduction(GwWebPattern):
         super().__init__(*args, **kwargs)
 
     def activate(self):
-        self.web.contexts.register("demo",
+        self.web.contexts.register("ub",
                                    template_folder=os.path.join(os.path.dirname(__file__), "templates/"),
                                    static_folder=os.path.join(os.path.dirname(__file__), "static/"),
-                                   url_prefix=None,
-                                   description="Context fpr demo pages")
+                                   url_prefix="/ub",
+                                   description="Context for useblocks pages")
 
-        self.web.routes.register("/", ["GET"], self.__introduction_view, context="demo")
+        self.web.routes.register("/", ["GET"], self.__introduction_view, context="ub")
 
     def __introduction_view(self):
         return self.web.providers.render("introduction.html")
