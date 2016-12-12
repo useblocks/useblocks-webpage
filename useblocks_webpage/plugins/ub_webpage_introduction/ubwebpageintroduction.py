@@ -18,5 +18,3 @@ class UbWebpageIntroduction(GwWebPattern):
 
     def __introduction_view(self):
         return self.web.render("introduction.html")
-
-
