@@ -5,7 +5,7 @@ from flask import redirect, url_for
 
 def create_app():
     app = App([os.path.abspath(os.path.join(os.path.dirname(__file__), "configuration.py"))])
-    app.plugins.activate(["GwWeb", "UbWebpageIntroduction", "GwWebManager", "GwPluginsInfo"])
+    app.plugins.activate(app.config.PLUGINS)
 
     def open_page():
         with app.web.flask.app_context():

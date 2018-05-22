@@ -41,6 +41,10 @@ setup(
                             "useblocks_webpage.applications.useblocks_webpage_app:start_app"],
         'groundwork.plugin': ["useblocks_webpage_introduction_plugin = "
                               "useblocks_webpage.plugins.ub_webpage_introduction.ubwebpageintroduction:"
-                              "UbWebpageIntroduction"],
+                              "UbWebpageIntroduction",
+                              "useblocks_webpage_jobs_plugin = "
+                              "useblocks_webpage.plugins.ub_webpage_jobs.ubwebpagejobs:"
+                              "UbWebpageJobs"
+                              ],
     }
 )
