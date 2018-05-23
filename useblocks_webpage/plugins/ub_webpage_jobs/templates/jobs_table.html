@@ -1,0 +1,22 @@
+{% if jobs|length == 0 %}
+Sorry, we currently have no open job positions.
+{% else %}
+
+<table id="jobs_table" class="dataTable">
+    <thead>
+        <tr>
+            <th class="job_name">Job</th>
+            <th class="job_description">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%  for job in jobs %}
+        <tr onclick="window.open('/hires/{{ job.url }}', '_blank')">
+
+            <td class="job_name">{{ job.name }}</td>
+            <td class="job_description">{{ job.long_name }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}

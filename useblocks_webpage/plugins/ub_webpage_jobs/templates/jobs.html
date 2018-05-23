@@ -22,6 +22,9 @@
 {#    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">#}
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" type="text/css" href="/hires/static/js/datatables.css"/>
+    <link rel="stylesheet" type="text/css" href="/hires/static/css/useblocks_datatables.css"/>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -92,8 +95,23 @@
         </div>
     </header>
 
+    <section class="style_dark" id="jobs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Jobs</h2>
+                    <hr class="star">
+                </div>
+            </div>
+            <div class="row">
+                {% include "jobs_table.html" %}
+
+            </div>
+        </div>
+    </section>
+
     <!-- Conviction Grid Section -->
-    <section class="style_dark" id="conviction">
+    <section class="style_yellow" id="benefits">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -200,62 +218,86 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="style_yellow" id="about">
+    <!-- workplace section-->
+    <section class="style_dark" id="workplace">
+    </section>
+
+    <!-- TEAM section-->
+    <section class="style_yellow" id="team">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                <div class="col-md-12 text-center">
+                    <h2>Team</h2>
                     <hr class="star">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1">
+                <div class="col-lg-12 text-center">
                     <p>
-                        useblocks is a German company and operates in the field of company internal processes,
-                        communication and software solutions.
-                    </p>
-                    <p>
-                        We are focused on engineering related companies and their development teams.
-                        Our solutions help engineers to build better products faster.
                     </p>
                 </div>
-                <div class="col-lg-5">
-                    <p>
-                        useblocks' expertise is based on detailed knowledge on a wide range of use cases and
-                        technologies.
+            </div>
+            <div class="row">
+                <div class="col-sm-2 ub_item "></div>
+                <div class="col-sm-4 ub_item text-center">
+                    <div class="circle_team" id="marco"></div>
+
+                    <h4 class="text-center">Marco Heinemann</h4>
+                    <p class="text-center">
+                        Dipl.-Ing. Environmental Engineering<br>
+                        <span class="label label-transparent">Automotive</span>
+                        <span class="label label-transparent">Scripts</span>
+                        <span class="label label-transparent">Tools</span>
+                        <br>
+                        <span class="label label-transparent">Python</span>
+                        <span class="label label-transparent">C/C++/C#</span>
+                        <span class="label label-transparent">RegEx</span>
+                        <br>
+                        <span class="label label-transparent">ISO26262 Tool Dev</span>
+                        <span class="label label-transparent">Autosar</span>
                     </p>
-                    <p>
-                        From small scripts to web applications for hundreds of engineers. From
-                        automotive change-management processes to open-source projects. useblocks finds and creates
-                        the right solution.
-                    </p>
+                    <a href="https://www.xing.com/profile/Marco_Heinemann16" target="_blank" class="btn btn-lg btn-outline"
+                       target="_blank">
+                        <i class="fa fa-xing"> Xing</i>
+                    </a>
                 </div>
+
+                <div class="col-sm-4 ub_item text-center">
+                    <div class="circle_team" id="daniel"></div>
+                    <h4 class="text-center">Daniel Woste</h4>
+                    <p class="text-center">
+                        Dipl.-Ing. Electrical Engineering <br>
+                        <span class="label label-transparent">Automotive</span>
+                        <span class="label label-transparent">Processes</span>
+                        <span class="label label-transparent">Cloud</span>
+                        <br>
+                        <span class="label label-transparent">Python</span>
+                        <span class="label label-transparent">Databases</span>
+                        <span class="label label-transparent">HTML5</span>
+                        <br>
+                        <span class="label label-transparent">FOSS</span>
+                        <span class="label label-transparent">KISS</span>
+                        <span class="label label-transparent">DRY</span>
+                    </p>
+                    <a href="https://www.xing.com/profile/Daniel_Woste" target="_blank" class="btn btn-lg btn-outline"
+                       target="_blank">
+                        <i class="fa fa-xing"> Xing</i>
+                    </a>
+                </div>
+                <div class="col-sm-2 ub_item "></div>
             </div>
         </div>
     </section>
 
-    <!--EXPERTISE Section-->
-    <section class="style_dark" id="expertise">
+    <!-- challenges section-->
+    <section class="style_dark" id="challenges">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Expertise</h2>
+                    <h2>Challenges</h2>
                     <hr class="star">
                 </div>
             </div>
-
-            <!--<div class="row">-->
-                <!--<div class="col-md-10 col-md-offset-1 text-center">-->
-                    <!--<h3>Integrated libraries<br>-->
-                        <!--<small>-->
-                            <!--groundwork integrates some of the most common Python packages and makes their functions-->
-                            <!--available under an easy to learn application interface-->
-                        <!--</small>-->
-                    <!--</h3>-->
-                <!--</div>-->
-            <!--</div>-->
-
             <div class="row">
                 <div class="col-sm-12 col-md-2">
                     <p><b>Operating Systems</b></p>
@@ -419,193 +461,9 @@
                     <img src="/ub/static/img/stars_4.svg" class="rating"> Hipchat<br>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- TEAM section-->
-    <section class="style_yellow" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Team</h2>
-                    <hr class="star">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2 ub_item "></div>
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle_team" id="marco"></div>
-
-                    <h4 class="text-center">Marco Heinemann</h4>
-                    <p class="text-center">
-                        Dipl.-Ing. Environmental Engineering<br>
-                        <span class="label label-transparent">Automotive</span>
-                        <span class="label label-transparent">Scripts</span>
-                        <span class="label label-transparent">Tools</span>
-                        <br>
-                        <span class="label label-transparent">Python</span>
-                        <span class="label label-transparent">C/C++/C#</span>
-                        <span class="label label-transparent">RegEx</span>
-                        <br>
-                        <span class="label label-transparent">ISO26262 Tool Dev</span>
-                        <span class="label label-transparent">Autosar</span>
-                    </p>
-                    <a href="https://www.xing.com/profile/Marco_Heinemann16" target="_blank" class="btn btn-lg btn-outline"
-                       target="_blank">
-                        <i class="fa fa-xing"> Xing</i>
-                    </a>
-                </div>
-
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle_team" id="daniel"></div>
-                    <h4 class="text-center">Daniel Woste</h4>
-                    <p class="text-center">
-                        Dipl.-Ing. Electrical Engineering <br>
-                        <span class="label label-transparent">Automotive</span>
-                        <span class="label label-transparent">Processes</span>
-                        <span class="label label-transparent">Cloud</span>
-                        <br>
-                        <span class="label label-transparent">Python</span>
-                        <span class="label label-transparent">Databases</span>
-                        <span class="label label-transparent">HTML5</span>
-                        <br>
-                        <span class="label label-transparent">FOSS</span>
-                        <span class="label label-transparent">KISS</span>
-                        <span class="label label-transparent">DRY</span>
-                    </p>
-                    <a href="https://www.xing.com/profile/Daniel_Woste" target="_blank" class="btn btn-lg btn-outline"
-                       target="_blank">
-                        <i class="fa fa-xing"> Xing</i>
-                    </a>
-                </div>
-                <div class="col-sm-2 ub_item "></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO section-->
-    <section class="style_dark" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                <!--DESCRIPTION HERE-->
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle circle_red"><h4>WASCO</h4></div>
-                    <h4 class="text-center">WebApp for SW Coordination and Organisation</h4>
-                    <p class="text-center">
-                        Used by engineers to keep control of development related artefacts.
-                    </p>
-                </div>
-
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle" id="heyql">
-                    </div>
-
-                    <h4 class="text-center">HeyQL Metrics for JIRA</h4>
-                    <p class="text-center">
-                        Manage metrics and their data inside JIRA issues.
-                    </p>
-                    <p>
-                        <a href="https://heyql.com" target="_blank" class="btn btn-lg btn-outline"
-                           target="_blank">
-                            <i class="fa fa-globe"> Website</i>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle circle_turkis"><h4>JIRA</h4></div>
-                    <h4 class="text-center">JIRA Webhook Server</h4>
-                    <p class="text-center">
-                        Enables companies to implement complex business processes into JIRA workflows.
-                    </p>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle" id="groundwork">
-                    </div>
-
-                    <h4 class="text-center">Groundwork</h4>
-                    <p class="text-center">
-                        Python Application Framework for rapid prototyping of company internal tools.
-                    </p>
-                    <p>
-                        <a href="https://groundwork.readthedocs.io/" target="_blank" class="btn btn-lg btn-outline"
-                           target="_blank">
-                            <i class="fa fa-globe"> Website</i>
-                        </a>
-                        <a href="https://github.com/useblocks/groundwork" target="_blank" class="btn btn-lg btn-outline"
-                           target="_blank">
-                            <i class="fa fa-github"> Code</i>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle" id="groundwork-web">
-                    </div>
-
-                    <h4 class="text-center">Groundwork-Web</h4>
-                    <p class="text-center">
-                        Web-Package for groundwork to enable the development of web applications.
-                    </p>
-                    <p>
-                        <a href="https://groundwork-web.readthedocs.io/" target="_blank" class="btn btn-lg btn-outline"
-                           target="_blank">
-                            <i class="fa fa-globe"> Website</i>
-                        </a>
-                        <a href="https://github.com/useblocks/groundwork-web" target="_blank"
-                           class="btn btn-lg btn-outline"
-                           target="_blank">
-                            <i class="fa fa-github"> Code</i>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-sm-4 ub_item text-center">
-                    <div class="circle" id="groundwork-database">
-                    </div>
-
-                    <h4 class="text-center">Groundwork-Database</h4>
-                    <p class="text-center">
-                        Adds database managment functions to groundwork applications.
-                    </p>
-                    <p>
-                        <a href="https://groundwork-database.readthedocs.io/" target="_blank"
-                           class="btn btn-lg btn-outline"
-                           target="_blank">
-                            <i class="fa fa-globe"> Website</i>
-                        </a>
-                        <a href="https://github.com/useblocks/groundwork-database" target="_blank"
-                           class="btn btn-lg btn-outline"
-                           target="_blank">
-                            <i class="fa fa-github"> Code</i>
-                        </a>
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -663,8 +521,8 @@
         </a>
     </div>
 
-    <!-- jQuery -->
-    <script src="/ub/static/vendor/jquery/jquery.min.js"></script>
+{#    <script src="/hires/static/js/jQuery-3.2.1/jquery-3.2.1.min.js" type="text/javascript"></script>#}
+{#    <script type="text/javascript" src="/hires/static/js/datatables.js"></script>#}
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/ub/static/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -674,6 +532,18 @@
 
     <!-- Theme JavaScript -->
     <script src="/ub/static/js/freelancer.min.js"></script>
+
+{#    <script>#}
+{#        $(document).ready( function () {#}
+{#            $('#jobs_table').DataTable( {#}
+{#                "paging":   false,#}
+{#                "ordering": false,#}
+{#                "info":     false,#}
+{#                "lengthChange": false,#}
+{#                "search": false,#}
+{#            });#}
+{#        } );#}
+{#    </script>#}
 
 </body>
 

@@ -2,7 +2,7 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   background-color: #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 p,
 #expertise {
@@ -114,13 +114,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: #000000;
-  background: #FFCC00;
+  background: #ffcc00;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: #000000;
-  background: #FFCC00;
+  background: #ffcc00;
 }
 .navbar-custom .navbar-toggle {
   text-transform: uppercase;
@@ -298,62 +298,62 @@ a.btn-outline.active {
 }
 .style_dark {
   background: #333333;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .style_dark a,
 .style_dark a:hover,
 .style_dark a:focus,
 .style_dark a.active {
-  color: #FFCC00;
+  color: #ffcc00;
   outline: none;
 }
 .style_dark hr.star {
-  border-color: #FFFFFF;
-  color: #FFFFFF;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 .style_dark hr.star:after {
   background-color: #333333;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .style_dark a.btn-outline {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .style_dark a.btn-outline:hover,
 .style_dark a.btn-outline:focus,
 .style_dark a.btn-outline:active,
 .style_dark a.btn-outline.active {
-  color: #FFFFFF;
+  color: #ffffff;
   background: #333333;
 }
 .style_light {
   background: #444444;
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 .style_light a,
 .style_light a:hover,
 .style_light a:focus,
 .style_light a.active {
-  color: #FFCC00;
+  color: #ffcc00;
   outline: none;
 }
 .style_light hr.star {
-  border-color: #FFFFFF;
-  color: #FFFFFF;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 .style_light hr.star:after {
   background-color: #444444;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .style_light a.btn-outline {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .style_light a.btn-outline:hover,
 .style_light a.btn-outline:focus,
 .style_light a.btn-outline:active,
 .style_light a.btn-outline.active {
-  color: #FFFFFF;
+  color: #ffffff;
   background: #444444;
 }
 @media (max-width: 767px) {
@@ -533,4 +533,12 @@ img.rating {
 }
 #expertise div.row {
   margin-bottom: 20px;
+}
+ul.job_skills li {
+  display: list-item;
+  text-align: left;
+  font-size: 1.5em;
+  list-style-type: none;
+  background: url(/hires/static/img/bullet.png) left no-repeat;
+  padding-left: 40px;
 }

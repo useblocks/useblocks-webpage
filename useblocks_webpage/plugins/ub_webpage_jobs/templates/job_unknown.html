@@ -15,7 +15,7 @@
     <link href="/ub/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="/hires/static/css/useblocks.css" rel="stylesheet">
+    <link href="/ub/static/css/useblocks.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="/ub/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -82,11 +82,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive img-slogan" src="/hires/static/img/{{ job.logo }}" alt="">
                     <div class="intro-text">
-                        <span class="name">{{ job.name }}</span>
+                        <span class="name">Unknown job<br>{{ job_url }}</span>
                         <hr class="star">
-                        <span class="skills">{{ job.long_name }}</span>
+                        <span class="skills">Ohh, we are sorry. <br>But we haven't heart about that open job position.</span>
+                        <br><br>
+                        <span class="skills">But maybe we have some other jobs for you...</span><br>
                     </div>
                 </div>
             </div>
@@ -100,87 +101,13 @@
                     <h2>Job description</h2>
                     <hr class="star">
                     <p>
-                        {{ job.description }}
+                        Ohh, we are sorry. But we haven't heart about that open job position.
                     </p>
+                    {% include "jobs_table.html" %}
                 </div>
             </div>
         </div>
      </section>
-
-    <!-- Conviction Grid Section -->
-    <section class="style_yellow" id="conviction">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Needed skills</h2>
-                    <hr class="star">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-2 text-center"></div>
-                <div class="col-lg-8 text-center">
-                    <div class="row">
-                        <div class="col-lg-6 text-center">
-                            <h4>Coding skills</h4>
-                            <ul class="job_skills">
-                                {% for skill in job.skills.coding %}
-                                    <li><span>{{ skill }}</span></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 text-center">
-                            <h4>Project management skills</h4>
-                            <ul class="job_skills">
-                                {% for skill in job.skills.project %}
-                                    <li><span>{{ skill }}</span></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 text-center"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="style_dark" id="conviction">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Tasks</h2>
-                    <hr class="star">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 text-center"></div>
-                <div class="col-lg-6 text-center">
-                    <ul class="job_skills">
-                    {% for task in job.tasks %}
-                        <li><span>{{ task }}</span></li>
-                    {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-lg-3 text-center"></div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="style_yellow" id="conviction">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Not the right job? Try another...</h2>
-                    <hr class="star">
-                </div>
-            </div>
-            <div class="row">
-                {% include "jobs_table.html" %}
-            </div>
-        </div>
-    </section>
 
 
     <!-- Footer -->
