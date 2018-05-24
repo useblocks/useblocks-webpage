@@ -15,12 +15,12 @@
     <link href="/ub/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="/ub/static/css/useblocks.css" rel="stylesheet">
+    <link href="/hires/static/css/useblocks.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="/ub/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 {#    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">#}
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+{#    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">#}
 
     <link rel="stylesheet" type="text/css" href="/hires/static/js/datatables.css"/>
     <link rel="stylesheet" type="text/css" href="/hires/static/css/useblocks_datatables.css"/>
@@ -44,7 +44,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">
+                <a class="navbar-brand" href="/">
                     <img class="img-logo" src="/ub/static/img/ub_logo.png">useblocks
                 </a>
             </div>
@@ -56,19 +56,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
+                        <a href="#jobs">Jobs</a>
+                    </li>
+                    <li class="page-scroll">
                         <a href="#benefits">Benefits</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#workplace">Workplace</a>
+                        <a href="#workday">workday</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#workplace">Team</a>
+                        <a href="#team">Team</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#challenges">Challenges</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#jobs">Jobs</a>
                     </li>
                 </ul>
             </div>
@@ -219,7 +219,141 @@
     </section>
 
     <!-- workplace section-->
-    <section class="style_dark" id="workplace">
+    <section class="style_dark" id="workday">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Workday</h2>
+                    <hr class="star">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>
+                        Want to know how an average workday at useblocks may look like? Here is an example of a
+                        typical workday of us:
+                    </p>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <table class="workday">
+                        <tbody>
+                            <tr>
+                                <td>8:00</td>
+                                <td>
+                                    Arrive at your current workplace (useblocks bureau, customer or your pc at home).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8:10</td>
+                                <td>
+                                    Say hello to all local co-worker and get your first free coffee/tea.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8:20</td>
+                                <td>
+                                    Start the engines and log in to our chat systems.<br>
+                                    Welcome all off-side colleagues from India and Ukraine.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8:30</td>
+                                <td>
+                                    Stand-Up meeting with local and off-side colleagues.<br>
+                                    Get the news, plan your day.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8:50</td>
+                                <td>
+                                    Check your open issues on JIRA.<br>
+                                    Hold a video call with issue reporter to clarify the correct needs.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9:10</td>
+                                <td>
+                                    Start developing and write code.<br>
+                                    Check team chat for some news or open questions, on which you may help.
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>10:30</td>
+                                <td>
+                                    Code works as expected. Write needed test cases by using Python, Pytest and tox.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11:30</td>
+                                <td>
+                                    Tests passed locally. Time for updating the documentation by using Sphinx.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12:00</td>
+                                <td>
+                                    Code, tests and docs are finished.<br>
+                                    Time for creating a gerrit change and ask a colleague for review.<br>
+                                    Jenkins already started to perform tests, create reports and build documentation.<br>
+                                    This may need some minutes. Time for lunch.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12:15</td>
+                                <td>
+                                    It's pizza day. Colleagues and you are going to a local italian restaurant.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13:15</td>
+                                <td>
+                                    Back from lunch and everything passed in Jenkins.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13:30</td>
+                                <td>
+                                    Reviewer found some smaller issues in code and docs.<br>
+                                    Fixing them takes 10 minutes only.<br>
+                                    Patch is send to gerrit and Jenkins starts again to test it.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13:50</td>
+                                <td>
+                                    Jenkins and reviewer are happy with the patch.<br>
+                                    Your colleague already accepted the change, so that the merge has already been done
+                                    by gerrit.<br>
+                                    Jenkins starts to create packages and deploy them to test systems.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                <td>
+                                    Your team got automatically informed about a new release in the team's riot chat group.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14:30</td>
+                                <td>
+                                    Time to get the children from kindergarten. You take a break and have some
+                                    family time.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16:00</td>
+                                <td>
+                                    Back to work, but from home.<br>
+                                    Luckily all useblocks systems are running in the cloud. So taking the next issue...
+                                </td>
+                            </tr>
+
+                       </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- TEAM section-->
@@ -245,21 +379,7 @@
                     <h4 class="text-center">Marco Heinemann</h4>
                     <p class="text-center">
                         Dipl.-Ing. Environmental Engineering<br>
-                        <span class="label label-transparent">Automotive</span>
-                        <span class="label label-transparent">Scripts</span>
-                        <span class="label label-transparent">Tools</span>
-                        <br>
-                        <span class="label label-transparent">Python</span>
-                        <span class="label label-transparent">C/C++/C#</span>
-                        <span class="label label-transparent">RegEx</span>
-                        <br>
-                        <span class="label label-transparent">ISO26262 Tool Dev</span>
-                        <span class="label label-transparent">Autosar</span>
                     </p>
-                    <a href="https://www.xing.com/profile/Marco_Heinemann16" target="_blank" class="btn btn-lg btn-outline"
-                       target="_blank">
-                        <i class="fa fa-xing"> Xing</i>
-                    </a>
                 </div>
 
                 <div class="col-sm-4 ub_item text-center">
@@ -267,22 +387,7 @@
                     <h4 class="text-center">Daniel Woste</h4>
                     <p class="text-center">
                         Dipl.-Ing. Electrical Engineering <br>
-                        <span class="label label-transparent">Automotive</span>
-                        <span class="label label-transparent">Processes</span>
-                        <span class="label label-transparent">Cloud</span>
-                        <br>
-                        <span class="label label-transparent">Python</span>
-                        <span class="label label-transparent">Databases</span>
-                        <span class="label label-transparent">HTML5</span>
-                        <br>
-                        <span class="label label-transparent">FOSS</span>
-                        <span class="label label-transparent">KISS</span>
-                        <span class="label label-transparent">DRY</span>
                     </p>
-                    <a href="https://www.xing.com/profile/Daniel_Woste" target="_blank" class="btn btn-lg btn-outline"
-                       target="_blank">
-                        <i class="fa fa-xing"> Xing</i>
-                    </a>
                 </div>
                 <div class="col-sm-2 ub_item "></div>
             </div>
@@ -299,167 +404,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12 col-md-2">
-                    <p><b>Operating Systems</b></p>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> GNU/Linux Embedded <br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> GNU/Linux Server <br>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> GNU/Linux Desktop <br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Windows Desktop <br>
-                </div>
 
-                <div class="col-sm-12 col-md-4">
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Windows Server <br>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-2">
-                    <p><b>Languages and more</b></p>
-                </div>
-
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> C<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> C++<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> C#<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Python<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Javascript<br>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> Java<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> Bash<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> VBA<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> HTML<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> CSS<br>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> LESS<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> RegEx<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> XML<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> JSON<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> ANTLR<br>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-2">
-                    <p><b>Frameworks, APIs and Libraries </b></p>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <h5>Python</h5>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Flask + Extensions<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Requests<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> SQLALchemy<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Buildout<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Sphinx<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Cookiecutter<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Tox<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> PyTest<br>
-
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <h5>JS / HTML / CSS</h5>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> jQuery<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> AngularJs<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Highcharts<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Bootstrap<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> FontAwesome<br>
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <h5>Others</h5>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Atlassian Connect<br>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-2">
-                    <p><b>Cloud Services</b></p>
-                </div>
-
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> github<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Bitbucket<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Travis<br>
-
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Amazon EC2<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Amazon S3<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> Amazon RDS<br>
-
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Sentry<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Coveralls<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Readthedocs<br>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-2">
-                    <p><b>Databases</b></p>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> sqlite<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> PostgresSQL<br>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> MySQL<br>
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> MongoDB<br>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-2">
-                    <p><b>IDEs</b></p>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> PyCharm<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> Eclipse<br>
-
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> Visual Studio<br>
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Vim<br>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-2">
-                    <p><b>Other Software</b></p>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> git<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Subversion<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> Apache<br>
-                    <img src="/ub/static/img/stars_3.svg" class="rating"> nginx<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Ansible<br>
-                </div>
-                <div class="col-sm-12 col-md-3">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> Jenkins<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> devpi<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Bareos<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Zabbix<br>
-                </div>
-
-                <div class="col-sm-12 col-md-4">
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> ngrok<br>
-                    <img src="/ub/static/img/stars_5.svg" class="rating"> JIRA<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Confluence<br>
-                    <img src="/ub/static/img/stars_4.svg" class="rating"> Hipchat<br>
-                </div>
             </div>
         </div>
     </section>
@@ -521,29 +466,18 @@
         </a>
     </div>
 
-{#    <script src="/hires/static/js/jQuery-3.2.1/jquery-3.2.1.min.js" type="text/javascript"></script>#}
-{#    <script type="text/javascript" src="/hires/static/js/datatables.js"></script>#}
+
+      <!-- jQuery -->
+    <script src="/ub/static/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/ub/static/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+{#    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>#}
 
     <!-- Theme JavaScript -->
     <script src="/ub/static/js/freelancer.min.js"></script>
-
-{#    <script>#}
-{#        $(document).ready( function () {#}
-{#            $('#jobs_table').DataTable( {#}
-{#                "paging":   false,#}
-{#                "ordering": false,#}
-{#                "info":     false,#}
-{#                "lengthChange": false,#}
-{#                "search": false,#}
-{#            });#}
-{#        } );#}
-{#    </script>#}
 
 </body>
 

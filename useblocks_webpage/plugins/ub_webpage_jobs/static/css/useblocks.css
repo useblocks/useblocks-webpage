@@ -356,6 +356,78 @@ a.btn-outline.active {
   color: #ffffff;
   background: #444444;
 }
+.style_blue {
+  color: #000000;
+  background-image: -moz-radial-gradient(center top, ellipse farthest-side, #0dbcff, #73d8ff 100%);
+  background-image: -ms-radial-gradient(center top, ellipse farthest-side, #0dbcff, #73d8ff 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#0dbcff), to(#73d8ff));
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, #0dbcff, #73d8ff 100%);
+  background-image: -o-radial-gradient(center top, ellipse farthest-side, #0dbcff, #73d8ff 100%);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+.style_blue a,
+.style_blue a:hover,
+.style_blue a:focus,
+.style_blue a.active {
+  color: #185b94;
+  outline: none;
+}
+.style_blue hr.star {
+  border-color: #000000;
+  color: #000000;
+}
+.style_blue hr.star:after {
+  background-color: none;
+  color: #000000;
+}
+.style_blue a.btn-outline {
+  color: #000000;
+  border-color: #000000;
+}
+.style_blue a.btn-outline:hover,
+.style_blue a.btn-outline:focus,
+.style_blue a.btn-outline:active,
+.style_blue a.btn-outline.active {
+  color: #000000;
+  background: #0dbcff;
+}
+.style_green {
+  color: #000000;
+  background-image: -moz-radial-gradient(center top, ellipse farthest-side, #24bf47, #67e283 100%);
+  background-image: -ms-radial-gradient(center top, ellipse farthest-side, #24bf47, #67e283 100%);
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#24bf47), to(#67e283));
+  background-image: -webkit-radial-gradient(center top, ellipse farthest-side, #24bf47, #67e283 100%);
+  background-image: -o-radial-gradient(center top, ellipse farthest-side, #24bf47, #67e283 100%);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+.style_green a,
+.style_green a:hover,
+.style_green a:focus,
+.style_green a.active {
+  color: #0c220c;
+  outline: none;
+}
+.style_green hr.star {
+  border-color: #000000;
+  color: #000000;
+}
+.style_green hr.star:after {
+  background-color: none;
+  color: #000000;
+}
+.style_green a.btn-outline {
+  color: #000000;
+  border-color: #000000;
+}
+.style_green a.btn-outline:hover,
+.style_green a.btn-outline:focus,
+.style_green a.btn-outline:active,
+.style_green a.btn-outline.active {
+  color: #000000;
+  background: #24bf47;
+}
 @media (max-width: 767px) {
   section {
     padding: 75px 0;
@@ -539,6 +611,52 @@ ul.job_skills li {
   text-align: left;
   font-size: 1.5em;
   list-style-type: none;
+}
+ul.job_tasks li {
+  display: list-item;
+  text-align: left;
+  font-size: 1.5em;
+  list-style-type: none;
   background: url(/hires/static/img/bullet.png) left no-repeat;
   padding-left: 40px;
+}
+div.job_meta {
+  font-size: 1.2em;
+  padding: 0px 40px;
+}
+div.left {
+  text-align: left;
+}
+div.right {
+  text-align: right;
+}
+div.job_details {
+  padding-top: 30px;
+}
+span.job_param {
+  color: #333;
+}
+span.job_value {
+  font-weight: bold;
+}
+img.job_contact {
+  width: 80px;
+  margin-bottom: 20px;
+}
+div.contact_name {
+  font-size: 2em;
+  padding-top: 0.5em;
+}
+div.contact_param {
+  padding-right: 20px;
+}
+table.workday {
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+table.workday td {
+  padding: 5px 10px;
+  border: 2px solid #fff;
+  text-align: left;
 }

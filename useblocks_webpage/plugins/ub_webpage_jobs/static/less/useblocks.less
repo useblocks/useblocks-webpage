@@ -417,6 +417,77 @@ a.btn-outline {
 	};
 }
 
+.style_blue {
+	color: @style_blue_text_color;
+    .radial(@style_blue_background_color; lighten(@style_blue_background_color, 20%); center top); //250% statt 100%
+
+	box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+	position:relative;
+	a,
+	a:hover,
+	a:focus,
+	a.active {
+		color: @style_blue_link_color;
+		outline: none;
+	};
+	hr.star {
+		border-color: @style_blue_text_color;
+		color: @style_blue_text_color;
+	};
+	hr.star:after {
+		background-color: none;
+		//background-color: @style_blue_background_color;
+		color: @style_blue_text_color;
+	};
+	a.btn-outline {
+		color: @style_blue_button_text_color;
+		border-color: @style_blue_button_border_color;
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			color: @style_blue_button_text_color;
+			background: @style_blue_button_background_color;
+		}
+	};
+}
+
+.style_green {
+	color: @style_green_text_color;
+    .radial(@style_green_background_color; lighten(@style_green_background_color, 20%); center top); //250% statt 100%
+
+	box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+	position:relative;
+	a,
+	a:hover,
+	a:focus,
+	a.active {
+		color: @style_green_link_color;
+		outline: none;
+	};
+	hr.star {
+		border-color: @style_green_text_color;
+		color: @style_green_text_color;
+	};
+	hr.star:after {
+		background-color: none;
+		//background-color: @style_green_background_color;
+		color: @style_green_text_color;
+	};
+	a.btn-outline {
+		color: @style_green_button_text_color;
+		border-color: @style_green_button_border_color;
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			color: @style_green_button_text_color;
+			background: @style_green_button_background_color;
+		}
+	};
+}
+
+
 @media(max-width:767px) {
 	section {
 		padding: 75px 0;
@@ -605,6 +676,64 @@ ul.job_skills li {
 	text-align: left;
 	font-size: 1.5em;
 	list-style-type:none;
+}
+
+ul.job_tasks li {
+	display: list-item;
+	text-align: left;
+	font-size: 1.5em;
+	list-style-type:none;
     background: url(/hires/static/img/bullet.png) left no-repeat;
 	padding-left: 40px;
+}
+
+div.job_meta {
+	font-size: 1.2em;
+	padding: 0px 40px;
+}
+
+div.left {
+	text-align: left;
+}
+
+div.right {
+	text-align: right;
+}
+
+div.job_details {
+	padding-top: 30px;
+}
+
+span.job_param {
+	color: #333;
+}
+
+span.job_value {
+	font-weight: bold;
+}
+
+img.job_contact {
+	width: 80px;
+	margin-bottom: 20px;
+}
+
+div.contact_name {
+  	font-size: 2em;
+	padding-top: 0.5em;
+}
+
+div.contact_param {
+  padding-right: 20px
+}
+
+table.workday {
+	font-size: 18px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+table.workday td{
+	padding: 5px 10px;
+	border: 2px solid #fff;
+	text-align: left;
 }
