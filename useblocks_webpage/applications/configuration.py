@@ -6,7 +6,7 @@ APP_DESCRIPTION = "groundwork application of package useblocks webpage"
 APP_PATH = os.path.dirname(__file__)
 PACKAGE_PATH = os.path.join(os.path.dirname(__file__), "..", "..")
 
-PLUGINS = ["GwWeb", "UbWebpageIntroduction", "UbWebpageJobs", "GwWebManager", "GwPluginsInfo"]
+PLUGINS = ["GwWeb", "UbWebpage"]
 
 # The Server_NAME should contain ip/name + port. If port is 80 or 412, leave it away!
 FLASK_SERVER_NAME = os.getenv("FLASK_SERVER_NAME", "127.0.0.1:5000")
@@ -52,7 +52,7 @@ GROUNDWORK_LOGGING = {
         },
         'groundwork': {
             'handlers': ['console_stdout', 'file'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': False
         },
     }

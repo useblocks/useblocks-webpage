@@ -1,1 +1,1 @@
-from .ub_webpage_introduction.ubwebpageintroduction import UbWebpageIntroduction
+from .ub_webpage.ubwebpage import UbWebpage

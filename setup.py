@@ -39,12 +39,9 @@ setup(
     entry_points={
         'console_scripts': ["useblocks_webpage = "
                             "useblocks_webpage.applications.useblocks_webpage_app:start_app"],
-        'groundwork.plugin': ["useblocks_webpage_introduction_plugin = "
-                              "useblocks_webpage.plugins.ub_webpage_introduction.ubwebpageintroduction:"
-                              "UbWebpageIntroduction",
-                              "useblocks_webpage_jobs_plugin = "
-                              "useblocks_webpage.plugins.ub_webpage_jobs.ubwebpagejobs:"
-                              "UbWebpageJobs"
+        'groundwork.plugin': ["useblocks_webpage_plugin = "
+                              "useblocks_webpage.plugins.ub_webpage.ubwebpage:"
+                              "UbWebpage",
                               ],
     }
 )
