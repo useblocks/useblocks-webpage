@@ -37,6 +37,9 @@ class UbWebpage(GwWebPattern):
         self.web.routes.register("/hires", ["GET"], self.__jobs_view, context="ub", name="hires")
         self.web.routes.register("/hires/<job_url>", ["GET"], self.__job_view, context="ub", name="hires_job")
 
+        self.web.routes.register("/datenschutz", ["GET"], self.__datenschutz_view, context="ub", name="datenschutz")
+        self.web.routes.register("/impressum", ["GET"], self.__impressum_view, context="ub", name="impressum")
+
     def __introduction_view(self):
         return self.web.render("introduction.html", jobs=self.jobs, contacts=self.contacts, portfolio=self.portfolio)
 
@@ -56,4 +59,10 @@ class UbWebpage(GwWebPattern):
                 return self.web.render("job.html", job=job, jobs=self.jobs, contact=contact)
 
         return self.web.render("job_unknown.html", job_url=job_url, jobs=self.jobs, contact=self.contacts["woste"])
+
+    def __datenschutz_view(self):
+        return self.web.render("datenschutz.html")
+
+    def __impressum_view(self):
+        return self.web.render("impressum.html")
 
