@@ -109,17 +109,78 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-            <!--DESCRIPTION HERE-->
+                <h3>Open Source Tools and Libraries</h3>
             </div>
         </div>
         <div class="row portfolio">
 
-            {% for item in portfolio %}
+            {%  if tools|length % 4 == 0  %}
+                {%  set WIDTH=3 %}
+            {%  elif tools|length % 2 == 0 %}
+                {%  set WIDTH=6 %}
+            {%  else  %}
+                {%  set WIDTH=4 %}
+            {% endif %}
+
+            {% for item in tools %}
                 {% if item.active %}
-                <div class="col-sm-4 ub_item text-center">
+                <div class="col-md-{{ WIDTH }} ub_item text-center">
                     <div class="image">
                         {% if item.image != "" %}
                         <img src="/ub/static/img/{{ item.image}}">
+                        {% endif %}
+                    </div>
+
+                    <h4 class="text-center">{{ item.name }}</h4>
+                    <p class="text-center portfolio_description">
+                        {{ item.description }}
+                    </p>
+                    <p class="links">
+                        <a href="{{ item.website_url }}" target="_blank" class="btn btn-lg btn-outline"
+                           target="_blank">
+                            <i class="fa fa-globe"> Website</i>
+                        </a>
+
+                        {% if item.code_url != "" %}
+                        <a href="{{ item.code_url }}" target="_blank" class="btn btn-lg btn-outline"
+                           target="_blank">
+                            <i class="fa fa-github"> Code</i>
+                        </a>
+                        {% endif %}
+                    </p>
+
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        {# Presentations #}
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Presentations and Tutorials</h3>
+            </div>
+        </div>
+        <div class="row portfolio">
+            {%  if presentations|length % 4 == 0  %}
+                {%  set WIDTH=3 %}
+            {%  elif presentations|length % 2 == 0 %}
+                {%  set WIDTH=6 %}
+            {%  elif presentations|length == 1 %}
+                {%  set WIDTH=12 %}
+            {%  else  %}
+                {%  set WIDTH=4 %}
+            {% endif %}
+
+            {% for item in presentations %}
+                {% if item.active %}
+                <div class="col-md-{{ WIDTH }} ub_item text-center">
+                    <div class="image">
+                        {% if item.image != "" %}
+                            {%  if "http" in item.image %}
+                                <img src="{{ item.image }}">
+                            {% else %}
+                                <img src="/ub/static/img/{{ item.image }}">
+                            {% endif %}
                         {% endif %}
                     </div>
 
@@ -145,6 +206,53 @@
                 {% endif %}
             {% endfor %}
         </div>
+
+        {# Press #}
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>useblocks in the news</h3>
+            </div>
+        </div>
+        <div class="row portfolio">
+            {%  if press|length % 4 == 0  %}
+                {%  set WIDTH=3 %}
+            {%  elif press|length % 2 == 0 %}
+                {%  set WIDTH=6 %}
+            {%  elif press|length == 1 %}
+                {%  set WIDTH=12 %}
+            {%  else  %}
+                {%  set WIDTH=4 %}
+            {% endif %}
+
+            {% for item in press %}
+                {% if item.active %}
+                <div class="col-md-{{ WIDTH }} ub_item text-center">
+                    <div class="image">
+                        {% if item.image != "" %}
+                            {%  if "http" in item.image %}
+                                <img src="{{ item.image }}">
+                            {% else %}
+                                <img src="/ub/static/img/{{ item.image }}">
+                            {% endif %}
+                        {% endif %}
+                    </div>
+
+                    <h4 class="text-center">{{ item.name }}</h4>
+                    <p class="text-center portfolio_description">
+                        {{ item.description }}
+                    </p>
+                    <p>
+                        <a href="{{ item.url }}" target="_blank" class="btn btn-lg btn-outline"
+                           target="_blank">
+                            <i class="fa fa-globe"> News</i>
+                        </a>
+                    </p>
+
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
     </div>
 </section>
 

@@ -657,11 +657,14 @@ table.workday {
 }
 table.workday td {
   padding: 5px 10px;
-  border: 2px solid #fff;
   text-align: left;
 }
-p.portfolio_description {
-  min-height: 3em;
+table.workday td:first-of-type span {
+  background-color: #ffcc00;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px 10px;
+  color: black;
 }
 div.portfolio div.ub_item {
   height: 300px;
@@ -673,5 +676,13 @@ div.portfolio img {
 }
 div.portfolio div.image {
   min-height: 100px;
+}
+div.portfolio p.links {
+  position: absolute;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 /*# sourceMappingURL=useblocks.css.map */

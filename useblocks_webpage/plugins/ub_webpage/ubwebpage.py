@@ -8,6 +8,7 @@ class UbWebpage(GwWebPattern):
         self.name = self.__class__.__name__
         super().__init__(*args, **kwargs)
 
+        # jobs
         self.jobs = []
         jobs_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "jobs")
 
@@ -19,11 +20,33 @@ class UbWebpage(GwWebPattern):
                     if job["active"] is True:
                         self.jobs.append(job)
 
+        # contact
         with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "contacts.json")) as contact_file:
             self.contacts = json.load(contact_file)
 
-        with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "portfolio.json")) as portfolio_file:
-            self.portfolio = json.load(portfolio_file)
+        # tools
+        with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "tools.json")) as tools_file:
+            self.tools = json.load(tools_file)
+        self.active_tools = []
+        for item in self.tools:
+            if item["active"]:
+                self.active_tools.append(item)
+
+        # press
+        with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "press.json")) as press_file:
+            self.press = json.load(press_file)
+        self.active_press = []
+        for item in self.press:
+            if item["active"]:
+                self.active_press.append(item)
+
+        # presentations
+        with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "presentations.json")) as presentations_file:
+            self.presentations = json.load(presentations_file)
+        self.active_presentations = []
+        for item in self.presentations:
+            if item["active"]:
+                self.active_presentations.append(item)
 
     def activate(self):
         self.web.contexts.register("ub",
@@ -41,7 +64,9 @@ class UbWebpage(GwWebPattern):
         self.web.routes.register("/impressum", ["GET"], self.__impressum_view, context="ub", name="impressum")
 
     def __introduction_view(self):
-        return self.web.render("introduction.html", jobs=self.jobs, contacts=self.contacts, portfolio=self.portfolio)
+        return self.web.render("introduction.html", jobs=self.jobs,
+                               contacts=self.contacts, tools=self.active_tools,
+                               presentations=self.active_presentations, press=self.active_press)
 
     def __jobs_view(self):
         return self.web.render("jobs.html", jobs=self.jobs)

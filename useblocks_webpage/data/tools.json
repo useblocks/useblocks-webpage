@@ -19,7 +19,7 @@
   },
   {
     "name": "HeyQL Metrics for JIRA",
-    "active": true,
+    "active": false,
     "description": "Manage metrics and their data inside JIRA issues.",
     "image": "logo_marketplace_blue.png",
     "website_url": "https://heyql.com",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Groundwork-Web",
-    "active": true,
+    "active": false,
     "description": "Web-Package for groundwork to enable the development of web applications.",
     "image": "gw_web.png",
     "website_url": "https://groundwork-web.readthedocs.io/",
@@ -55,7 +55,7 @@
   },
   {
     "name": "Groundwork-Database",
-    "active": true,
+    "active": false,
     "description": "Adds database managment functions to groundwork applications.",
     "image": "gw_database.png",
     "website_url": "https://groundwork-database.readthedocs.io/",
