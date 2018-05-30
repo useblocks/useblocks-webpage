@@ -1,7 +1,7 @@
 {
   "id": "dev_py",
   "name": "Python SW Developer",
-  "active": true,
+  "active": false,
   "style": "blue",
   "author": "woste",
   "url": "python_sw_developer",

@@ -1,7 +1,7 @@
 {
   "id": "proj_mgt",
   "name": "Project manager",
-  "active": true,
+  "active": false,
   "style": "green",
   "author": "woste",
   "url": "project_manager",

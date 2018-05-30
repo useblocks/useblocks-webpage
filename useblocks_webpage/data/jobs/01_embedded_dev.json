@@ -1,7 +1,7 @@
 {
   "id": "dev_emb",
   "name": "Embedded SW Developer",
-  "active": true,
+  "active": false,
   "style": "yellow",
   "author": "heinemann",
   "url": "embedded_sw_developer",
