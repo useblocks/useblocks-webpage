@@ -1,42 +1,49 @@
 {
   "id": "dev_emb",
   "name": "Embedded SW Developer",
-  "active": false,
+  "active": true,
   "style": "yellow",
   "author": "heinemann",
   "url": "embedded_sw_developer",
   "logo": "heart_binary_black.png",
   "long_name": "Software Developer for embedded projects in international automotive companies",
-  "description": "As embedded software developer you work on hardware near projects of international automotive companies. You will be part of an international cross company team and be responsible from the first idea to the final product.",
-  "salary": "45-60k €",
+  "description": "As embedded software developer you work on hardware near projects for automotive electronic control units (ECUs). You will be part of a cross company team and be responsible from the first idea to the final product.<br/><br/>Main tasks are basic software configuration, development and integration of system functions, complex device drivers and high level software as well as debugging/testing. The ECUs all follow the Autosar 4 classic or adaptive standard and are part of the powertrain, vehicle dynamics or autonomous driving.<br/><br/>Almost all tasks can be done from our useblocks office, however 20% of the work can only be done at the customer's site.<br/><br/>Main skills needed are a high frustration tolerance against software problems and a strong focus on embedded systems.  ",
+  "salary": "45-65k €",
   "start": "01.07.2018",
   "type": "Full time",
   "job_years": "3 years",
   "location": "Munich + home office",
-  "coding_part": "~ 50%",
+  "coding_part": "~ 20%",
   "skills": {
-      "coding": [
-          ["C", 5],
-          ["C++", 4],
-          ["Python", 3]
+      "technical": [
+          ["Embedded processors (e.g. Aurix)", 5],
+          ["Embedded tools (e.g. Trace32, Vector)", 5],
+          ["CAN/Flexray", 4],
+          ["C/C++", 5],
+          ["AUTOSAR standard", 4],
+          ["Matlab/Simulink/Stateflow", 4],
+          ["E/E car architecture", 3],
+          ["Python", 3],
+          ["Build tools (make, ...)", 4],
+          ["Mechanical systems", 3]
       ],
       "project": [
-          ["Team lead", 3],
-          ["Time management", 3],
-          ["English skills", 5]
+          ["High self-motivation", 5],
+          ["Mindset: problems exist to solve them", 5],
+          ["Know when to ask for help", 5],
+          ["Team and communication skills", 5],
+          ["English", 4]
       ]
   },
   "tasks": [
-      "Writing and testing software",
-      "Document software",
-      "Define and document processes",
-      "Rapid prototyping for different solution",
-      "Analyse prototypes",
-      "Test software in vehicles",
-      "Participate on international vehicle test days"
+      "Autosar basic software configuration",
+      "Hardware IO configuration for Aurix processors",
+      "Development of complex device drivers",
+      "Integration of system functions",
+      "Test software on HiLs and in vehicles"
   ],
   "benefits_extra" : [
-      "vehicle tests in spain and norway",
+      "Potential for vehicle tests",
       "Strong hardware focus"
       ]
 }
