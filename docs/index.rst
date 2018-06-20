@@ -24,6 +24,7 @@ On the deployment Ubuntu server, run the following commands::
 
     git clone https://github.com/useblocks/useblocks-webpage.git
     cd useblocks-webpage
+    mkdir logs  # needed because logging does not create this dir
 
 Edit the file in location /home/<user>/useblocks_webpage/applications/configuration.py::
 
