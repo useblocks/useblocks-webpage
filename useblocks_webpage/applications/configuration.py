@@ -9,8 +9,9 @@ PACKAGE_PATH = os.path.join(os.path.dirname(__file__), "..", "..")
 PLUGINS = ["GwWeb", "UbWebpage"]
 
 # The Server_NAME should contain ip/name + port. If port is 80 or 412, leave it away!
-FLASK_SERVER_NAME = os.getenv("FLASK_SERVER_NAME", "127.0.0.1:5000")
-# FLASK_SERVER_NAME = os.getenv("FLASK_SERVER_NAME", "f77740c3.ngrok.io")
+FLASK_SERVER_NAME = os.getenv("FLASK_SERVER_NAME", "192.168.50.19")  # productive
+# FLASK_SERVER_NAME = os.getenv("FLASK_SERVER_NAME", "127.0.0.1:5000")  # local
+# FLASK_SERVER_NAME = os.getenv("FLASK_SERVER_NAME", "f77740c3.ngrok.io")  # ngrok
 
 FLASK_HOST = os.getenv("FLASK_HOST", "127.0.0.1")
 FLASK_PORT = os.getenv("FLASK_PORT", 5000)

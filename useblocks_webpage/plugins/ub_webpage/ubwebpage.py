@@ -15,7 +15,7 @@ class UbWebpage(GwWebPattern):
         for file in os.listdir(jobs_path):
             if file.endswith(".json"):
                 file_path = os.path.join(jobs_path, file)
-                with open(file_path) as job_file:
+                with open(file_path, encoding='utf-8') as job_file:
                     job = json.load(job_file)
                     if job["active"] is True:
                         self.jobs.append(job)
