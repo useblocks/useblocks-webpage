@@ -55,7 +55,7 @@ Create a file in location /etc/apache2/sites-available/useblocks-webpage.conf wi
         <Directory <checkout-location of the repo>>
             WSGIProcessGroup useblocks-webpage
             WSGIApplicationGroup %{GLOBAL}
-        Require all granted
+            Require all granted
         </Directory>
     </VirtualHost>
 
