@@ -50,7 +50,7 @@ Create a file in location /etc/apache2/sites-available/useblocks-webpage.conf wi
         ServerName <server IP address>
 
         WSGIDaemonProcess useblocks-webpage user=<user> group=<user> threads=5
-        WSGIScriptAlias / /home/<user>/useblocks_webpage/applications/useblocks_webpage_app.wsgi
+        WSGIScriptAlias / /home/<user>/useblocks-webpage/useblocks_webpage/applications/useblocks_webpage_app.wsgi
 
         <Directory <checkout-location of the repo>>
             WSGIProcessGroup useblocks-webpage
