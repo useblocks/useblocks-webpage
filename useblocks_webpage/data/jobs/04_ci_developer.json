@@ -26,21 +26,21 @@
           ["HTML/CSS", 4],
           ["Sphinx/RST", 3],
           ["PyCharm IDE", 2],
-          ["svn", 3]
+          ["svn", 3],
 	  ["git", 4],
           ["gerrit", 3]
       ],
       "project": [
           ["Communication skills", 4],
           ["Problem analysis",4],
-	  ["Solution design" 4]
+	      ["Solution design", 4],
           ["Task prioritizing", 4],
           ["JIRA ticket system", 3],
           ["OpenSource project organization", 3],
           ["OpenSource project infrastructure", 3],
           ["English language", 4],
           ["German language", 3],
-          ["Team lead", 2],
+          ["Team lead", 2]
       ]
   },
   "tasks": [
@@ -51,7 +51,7 @@
       "Writing and testing scripts and tools",
       "Document software",
       "Define and document processes",
-      "Analyse prototypes",
+      "Analyse prototypes"
   ],
   "benefits_extra" : [
       "Participation on open source conferences",

@@ -17,9 +17,9 @@
   "skills": {
       "technical": [
           ["Python", 5],
-          ["Or any other language", 4]
+          ["Or any other language", 4],
           ["Python packaging", 4],
-	  ["Continuous Integration", 4]
+	  ["Continuous Integration", 4],
           ["Linux", 3],
           ["Javascript", 3],
           ["HTML/CSS", 4],
@@ -39,22 +39,22 @@
           ["JIRA ticket system", 3],
           ["English language", 4],
           ["German language", 3],
-	  ["ISO 26262 knowledge", 1]
+	      ["ISO 26262 knowledge", 1],
           ["Team lead", 2],
           ["Communication skills", 4],
           ["Riot chats", 2]
       ]
   },
   "tasks": [
-      "Find and understand problems","
+      "Find and understand problems",
       "Collect and manage requirements",
       "Design prototypes",
-      "Develoop software and tools",
+      "Develop software and tools",
       "Document software",
       "Define and ehannce processes",
       "Rapid prototyping for different solution",
       "Analyse prototypes",
-      "Crate and manage Continuous Integration jobs",
+      "Create and manage Continuous Integration jobs",
       "Participate on international vehicle test days"
   ],
   "benefits_extra" : [
