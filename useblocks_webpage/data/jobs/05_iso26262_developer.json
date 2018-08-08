@@ -1,7 +1,7 @@
 {
     "id": "iso26262_dev",
     "name": "ISO 26262 Developer",
-    "active": true,
+    "active": false,
     "style": "blue",
     "author": "woste",
     "url": "iso26262_developer",

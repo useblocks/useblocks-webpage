@@ -1,7 +1,7 @@
 {
     "id": "ci_dev",
     "name": "CI Manager",
-    "active": true,
+    "active": false,
     "style": "blue",
     "author": "woste",
     "url": "continuous_integration_developer",
