@@ -64,8 +64,13 @@ target/
 src/
 bin/
 
-
 # IDEA IDEs
 .idea/
 
 logs/
+
+# Autoenv, Direnv and pipenv (Pipfile and Pipfile.lock must be removed here if the project decides to migrate to pipenv)
+.venv
+.envrc
+Pipfile
+Pipfile.lock
