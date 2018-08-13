@@ -25,7 +25,7 @@
         <div class="col-md-5  salary_class">
         </div>
         <div class="col-md-2  salary_result">
-            <p class="factor_result" id="base_salary_result">50.000€</p>
+            <p class="factor_result" id="base_salary_result">50.000,00€</p>
         </div>
     </div>
 
@@ -122,7 +122,7 @@
 
 <script lang="javascript">
 
-    var base_salary = 50000;
+    var base_salary = 50000.00;
     var ownership_factor = 0.0;
     var influence_factor = 0.0;
     var company_years = 0;
@@ -157,6 +157,9 @@
     }
 
     var update_factors = function() {
+
+        // BASE SALARY
+        $("#base_salary_result").html(formatCurrency(base_salary));
 
         // OWNERSHIP
         $("#ownership_current_text").html("Factor: <b>" + ownership_factor + "</b> <br>" + ownership_text[ownership_factor]);
