@@ -218,8 +218,23 @@
         </div>
     </section>
 
+    <section class="style_dark" id="salary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Salary</h2>
+                    <hr class="star">
+                </div>
+            </div>
+            <div class="row">
+                {% include "salary_table.html" %}
 
-    <section class="style_dark" id="apply">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="style_{{ job.style }}" id="apply">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -279,7 +294,7 @@
         </div>
     </section>
 
-    <section class="style_{{ job.style }}" id="jobs">
+    <section class="style_dark" id="jobs">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">

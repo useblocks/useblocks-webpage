@@ -689,3 +689,74 @@ p.no_jobs {
   text-align: center;
 }
 /*# sourceMappingURL=useblocks.css.map */
+
+
+/* SALARY TABLE */
+div.salary_container select, div.salary_container input {
+  color: #fff;
+  width: 100%;
+}
+
+div.salary_row {
+  border: 1px #333 solid;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 5px 20px;
+  text-align: left;
+  vertical-align: center;
+  font-size: 1em;
+}
+
+section.style_dark div.salary_row {
+  border: 1px #444 solid !important;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 5px 20px;
+  text-align: left;
+  vertical-align: center;
+  font-size: 1em;
+}
+
+span.factor_name {
+  font-size: 1.3em;
+}
+
+
+p.factor_text {
+  font-size: 1.0em;
+}
+
+#salary_head {
+  font-size: 1.3em;
+}
+d
+p.factor_current_text {
+  font-size: 1.0em;
+}
+
+section.style_dark #salary_final, section.style_dark #salary_head {
+  background: #444 !important;
+  color: #fff !important;
+}
+
+#salary_final, #salary_head {
+  background: #333;
+  color: #fff;
+}
+
+#salary_final span.factor_name {
+  font-weight: bold;
+}
+
+#salary_final div.salary_result {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+#final_salary_result {
+  border-bottom: 3px double;
+}
+
+p.factor_current_text {
+  font-size: 1em;
+}
