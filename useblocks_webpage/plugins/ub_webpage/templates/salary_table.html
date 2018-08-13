@@ -13,7 +13,7 @@
 
     <div id="salary_base" class="row salary_row">
         <div class="col-md-5  salary_factor">
-            <span class="factor_name">Base salary</span>
+            <span class="factor_name">Base salary per year</span>
             <p class="factor_text">
                 Each employee at useblocks starts with the same base salary
                 and there is no way that a contract at useblocks provides less salary.
@@ -40,13 +40,15 @@
             </p>
         </div>
         <div class="col-md-5  salary_class">
-            <select id="input_ownership" name="input_ownership">
-                <option>None</option>
-                <option>Own work</option>
-                <option>Complete Project</option>
-                <option>Complete Team</option>
-                <option>Whole Organization</option>
-            </select>
+            <div class="input-group">
+                <select id="input_ownership" name="input_ownership" class="selectpicker">
+                    <option>None</option>
+                    <option>Own work</option>
+                    <option>Complete Project</option>
+                    <option>Complete Team</option>
+                    <option>Whole Organization</option>
+                </select>
+            </div>
             <p class="factor_current_text" id="ownership_current_text">
 
             </p>
@@ -68,13 +70,15 @@
             </p>
         </div>
         <div class="col-md-5  salary_class">
-            <select id="input_influence" name="input_influence">
-                <option>Own work</option>
-                <option>Complete Project</option>
-                <option>Complete Team</option>
-                <option>Whole Organization</option>
-                <option>Industry</option>
-            </select>
+            <div class="input-group">
+                <select id="input_influence" name="input_influence"  class="selectpicker">
+                    <option>Own work</option>
+                    <option>Complete Project</option>
+                    <option>Complete Team</option>
+                    <option>Whole Organization</option>
+                    <option>Industry</option>
+                </select>
+            </div>
             <p class="factor_current_text" id="influence_current_text">
         </div>
         <div class="col-md-2  salary_result">
@@ -102,7 +106,7 @@
 
     <div id="salary_final" class="row salary_row">
         <div class="col-md-5  salary_factor">
-            <span class="factor_name">Final salary</span>
+            <span class="factor_name">Final salary per year</span>
             <p class="factor_text">
                 The final salary is the sum of the base salary plus the result of
                 the different classifications.
@@ -130,17 +134,17 @@
 
     var ownership_text = {
         0.0: "You are quite new to the team and therefore currently not responsible for your own outcome." +
-        "Your tasks are created and prioritizes by your project lead.",
+        " Your tasks are created and prioritized by your project lead.",
         0.1: "You manage completely your own work. You ask the customer for feedback, create and follow own tasks and" +
-        "finally present and defend the outcome of our work.",
-        0.3: "You manage the outcome of all team members in your project. You create their tasks, follow there progress" +
-        " and be responsible for the overall project outcome.",
+        " finally present the outcome of our work.",
+        0.3: "You manage the outcome of all team members in your project. You create their tasks, follow their progress" +
+        " and are responsible for the overall project outcome.",
         0.4: "You manage a complete team/department and therefore be responsible for the outcome of several projects.",
-        0.5: "The whole organization is yours. You are responsible for great KPIs, HR, Marketing and much more.",
+        0.5: "The whole organization is yours. You are responsible for creating KPIs, HR, Marketing and much more.",
     };
 
     var influence_text = {
-        0.0: "You work for your own and have nice ideas how to improve your daily work and outcome.",
+        0.0: "You work on your own and have good ideas how to improve your daily work and outcome.",
         0.1: "You see and solve problems for your project team and influence the way your project is organized.",
         0.2: "You have great ideas for all developers and your ideas get established on multiple projects.",
         0.3: "Your ideas are awesome and affect the whole organization e.g by improving the hiring process.",

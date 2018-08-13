@@ -492,11 +492,13 @@ a.btn-outline.active {
 .style_light .ub_item .ub_link .caption .caption-content h4 {
   margin: 0;
 }
+/*
 .style_yellow *,
 .style_dark *,
 .style_light * {
   z-index: 2;
 }
+*/
 @media (min-width: 767px) {
   section .ub_item {
     margin: 0 0 30px;
@@ -692,9 +694,12 @@ p.no_jobs {
 
 
 /* SALARY TABLE */
-div.salary_container select, div.salary_container input {
-  color: #fff;
-  width: 100%;
+div.salary_container button, div.salary_container input {
+  color: #fff !important;
+  width: 100% !important;
+  border-radius: 5px !important;
+  background-color: #555 !important;
+  border: none !important;
 }
 
 div.salary_row {
@@ -729,7 +734,7 @@ p.factor_text {
 #salary_head {
   font-size: 1.3em;
 }
-d
+
 p.factor_current_text {
   font-size: 1.0em;
 }
