@@ -1,12 +1,12 @@
 <div class="container salary_container">
     <div id="salary_head" class="row salary_row">
-        <div class="col-md-5 ">
+        <div class="col-md-5">
             Factor
         </div>
-        <div class="col-md-5 ">
+        <div class="col-md-5">
           Classification
         </div>
-        <div class="col-md-2 ">
+        <div class="col-md-2">
             Result
         </div>
     </div>
@@ -96,11 +96,28 @@
             </p>
         </div>
         <div class="col-md-5  salary_class">
-            <input id="input_salary_years" type="range" min="0" max="30">
+            <input id="input_salary_years" type="range" min="0" max="30" step="1.0">
             <p class="factor_current_text" id="salary_years_current_text">
         </div>
         <div class="col-md-2  salary_result">
             <p class="factor_result" id="salary_years_result">
+        </div>
+    </div>
+
+    <div id="salary_working_model" class="row salary_row">
+        <div class="col-md-5  salary_factor">
+            <span class="factor_name">Working model</span>
+            <p class="factor_text">
+                useblocks provides the right working model for you. Decide by yourself, how much time you want
+                to spend for the job. Full-time or a free selectable part-time.
+            </p>
+        </div>
+        <div class="col-md-5  salary_class">
+            <input id="input_salary_working_model" type="range" min="0.5" max="1" step="0.10">
+            <p class="factor_current_text" id="salary_working_model_current_text">
+        </div>
+        <div class="col-md-2  salary_result">
+            <p class="factor_result" id="salary_working_model_result">
         </div>
     </div>
 
@@ -126,11 +143,20 @@
 
 <script lang="javascript">
 
+
     var base_salary = 50000.00;
+    var hours_per_week = 40.0;
     var ownership_factor = 0.0;
     var influence_factor = 0.0;
     var company_years = 0;
     var company_years_factor = 0.02;
+    var working_model = 1.0;
+
+    var ownership_bonus = 0.0;
+    var influence_bonus = 0.0;
+    var loyalty_bonus = 0.0;
+    var working_model_bonus = 0.0;
+    var salary_final = 0.0;
 
     var ownership_text = {
         0.0: "You are quite new to the team and therefore currently not responsible for your own outcome." +
@@ -156,31 +182,38 @@
         ownership_bonus = ownership_factor*base_salary;
         influence_bonus = influence_factor*base_salary;
         loyalty_bonus = company_years*company_years_factor*base_salary
-        salary_final = base_salary + ownership_bonus + influence_bonus + loyalty_bonus;
+        salary_pre_final = base_salary + ownership_bonus + influence_bonus + loyalty_bonus;
+        working_model_bonus = (working_model * salary_pre_final) - salary_pre_final
+        salary_final = salary_pre_final + working_model_bonus
         $("#final_salary_result").text("= " + formatCurrency(salary_final));
     }
 
     var update_factors = function() {
+
+        // Recalculate final salary
+        final_salary();
 
         // BASE SALARY
         $("#base_salary_result").html(formatCurrency(base_salary));
 
         // OWNERSHIP
         $("#ownership_current_text").html("Factor: <b>" + ownership_factor + "</b> <br>" + ownership_text[ownership_factor]);
-        $("#ownership_result").text("+ " + formatCurrency(base_salary*ownership_factor));
+        $("#ownership_result").text("+ " + formatCurrency(ownership_bonus));
 
         // INFLUENCE
         $("#influence_current_text").html("Factor: <b>" + influence_factor + "</b> <br>" + influence_text[influence_factor]);
-        $("#influence_result").text("+ " + formatCurrency(base_salary*influence_factor));
+        $("#influence_result").text("+ " + formatCurrency(influence_bonus));
 
         // LOYALTY
         $('#salary_years_current_text').html("Years: <b>" + company_years + "</b><br>Factor: <b>"
             + company_years_factor*company_years+ "</b>");
-        $("#salary_years_result").text("+ " + formatCurrency(base_salary*company_years*company_years_factor));
+        $("#salary_years_result").text("+ " + formatCurrency(loyalty_bonus));
 
-
-        // Recalculate final salary
-        final_salary();
+        // WORKING MODEL
+        $('#salary_working_model_current_text').html("Percentage of work: <b>" + working_model*100
+            + " %</b><br>Hours per week: <b>" + working_model*hours_per_week
+            + "</b><br>Factor: <b>" + working_model + "</b> on complete salary");
+        $("#salary_working_model_result").text(formatCurrency(working_model_bonus));
     }
 
     $('#input_ownership').change(function() {
@@ -198,8 +231,13 @@
         update_factors();
     });
 
-    $('#salary_years').on('input', function() {
+    $('#input_salary_years').on('input', function() {
         company_years  = $('#input_salary_years').val();
+        update_factors();
+    })
+
+    $('#input_salary_working_model').on('input', function() {
+        working_model  = $('#input_salary_working_model').val();
         update_factors();
     })
 
@@ -209,8 +247,8 @@
             neg = true;
             total = Math.abs(total);
         }
-        step_1 = (neg ? "-" : '') + parseFloat(total, 10).toFixed(2).replace('.', ',')
-        step_2 = step_1.replace(/(\d)(?=(\d{3})+\,)/g, "$1.").toString() + '€';
+        step_1 = (neg ? "- " : '') + parseFloat(total, 10).toFixed(2).replace('.', ',')
+        step_2 = step_1.replace(/(\d)(?=(\d{3})+\,)/g, "$1.").toString() + ' €';
         return step_2
     }
 
@@ -227,6 +265,7 @@
                 .attr('selected', true);
 
         $('#input_salary_years').val("0");
+        $('#input_salary_working_model').val("1.0");
 
 
         update_factors();
