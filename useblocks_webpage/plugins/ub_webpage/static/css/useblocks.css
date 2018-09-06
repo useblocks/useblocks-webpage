@@ -877,3 +877,21 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #424242;
 }
+
+
+/*TEAM*/
+
+
+div.employee {
+  display: block;
+  float: left;
+  margin: 10px;
+  text-align: center;
+  width: 250px;
+}
+
+div.employee_image img{
+  width: 100px;
+  height: auto;
+}
+

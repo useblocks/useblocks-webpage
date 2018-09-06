@@ -20,9 +20,17 @@ class UbWebpage(GwWebPattern):
                     if job["active"] is True:
                         self.jobs.append(job)
 
-        # contact
-        with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "contacts.json")) as contact_file:
-            self.contacts = json.load(contact_file)
+        # employees
+        self.employees = {}
+        employees_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "employees")
+
+        for file in os.listdir(employees_path):
+            if file.endswith(".json"):
+                file_path = os.path.join(employees_path, file)
+                with open(file_path, encoding='utf-8') as employee_file:
+                    employee = json.load(employee_file)
+                    if employee["active"] is True:
+                        self.employees[employee['name'].lower()] = employee
 
         # tools
         with open(os.path.join(os.path.dirname(__file__), "..", "..", "data", "tools.json")) as tools_file:
@@ -57,15 +65,21 @@ class UbWebpage(GwWebPattern):
 
         self.web.routes.register("/", ["GET"], self.__introduction_view, context="ub")
 
+        # jobs
         self.web.routes.register("/hires", ["GET"], self.__jobs_view, context="ub", name="hires")
         self.web.routes.register("/hires/<job_url>", ["GET"], self.__job_view, context="ub", name="hires_job")
+
+        # employees
+        self.web.routes.register("/provides", ["GET"], self.__employees_view, context="ub", name="provides")
+        self.web.routes.register("/provides/<employee_url>", ["GET"], self.__employee_view, context="ub",
+                                 name="provides_employee")
 
         self.web.routes.register("/datenschutz", ["GET"], self.__datenschutz_view, context="ub", name="datenschutz")
         self.web.routes.register("/impressum", ["GET"], self.__impressum_view, context="ub", name="impressum")
 
     def __introduction_view(self):
         return self.web.render("introduction.html", jobs=self.jobs,
-                               contacts=self.contacts, tools=self.active_tools,
+                               employees=self.employees, tools=self.active_tools,
                                presentations=self.active_presentations, press=self.active_press)
 
     def __jobs_view(self):
@@ -76,10 +90,10 @@ class UbWebpage(GwWebPattern):
             if job["url"] == job_url:
                 if job["style"] not in ["yellow", "blue", "green"]:
                     job["style"] = "yellow"
-                if job["author"] in self.contacts.keys():
-                    contact = self.contacts[job["author"]]
+                if job["author"].lower() in self.employees.keys():
+                    contact = self.employees[job["author"]]
                 else:
-                    contact = self.contacts["woste"]
+                    contact = self.employees["Woste"]
 
                 return self.web.render("job.html", job=job, jobs=self.jobs, contact=contact)
 
@@ -91,3 +105,14 @@ class UbWebpage(GwWebPattern):
     def __impressum_view(self):
         return self.web.render("impressum.html")
 
+    def __employees_view(self):
+        return self.web.render("employees/overview.html", employees=self.employees)
+
+    def __employee_view(self, employee_url):
+        for employee in self.employees:
+            if employee["url"] == employee_url:
+                if employee["style"] not in ["yellow", "blue", "green"]:
+                    employee["style"] = "yellow"
+                return self.web.render("employees/single.html", employee=employee, employees=self.employees)
+
+        return self.web.render("employees/unknown.html", employee_url=employee_url, employees=self.employees)
